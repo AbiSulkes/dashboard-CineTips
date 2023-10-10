@@ -1,0 +1,26 @@
+.titulo {
+    padding-bottom: 1.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contenedor {
+    width: 700px;
+    height: 120px;
+    background: rgb(156, 14, 14);
+    margin-right: 2rem;
+}
+
+/* Opcional: Para alinear verticalmente el texto en el centro */
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+
+}
