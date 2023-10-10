@@ -13,8 +13,7 @@ function App() {
   return (
     <div>
 
-      <header className="navbar">
-
+      <header>
 
         <Link className='enlace' to="/" exact={true}>Home</Link>
         <Link className='enlace' to="/Usuario">Usuario</Link>
