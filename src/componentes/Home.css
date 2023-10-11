@@ -5,22 +5,77 @@
 .container {
     display: flex;
     justify-content: center;
-    
 }
 
+/*cajas individuales*/
 .contenedor {
-    width: 700px;
-    height: 120px;
-    background: rgb(156, 14, 14);
-    margin-right: 2rem;
+    width: 900px;
+    height: 100px;
+    margin-right: 5rem;
+    /* Ajuste del margen derecho */
+    background-color: #B30000;
+    border-left:solid 3px #FFFFFF;
+    border-radius: 5px;
+    /* Bordes más redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    /* Sutil sombra */
 }
 
-/* Opcional: Para alinear verticalmente el texto en el centro */
+/*texto en las cajas individuales*/
 .texto {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0;
+    color: #FFFFFF;
+    /* Color del texto */
+}
 
+/*contenedor de categorias fondo*/
+.contenedor2 {
+    width: 100%;
+    height: 400px;
+    /* Cambio a un rojo más intenso */
+    margin-right: 5rem;
+    /* Ajuste del margen derecho */
+    background-color: #B30000;
+    border: #B30000;
+    border-radius: 5px;
+    /* Bordes más redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    /* Sutil sombra */
+}
+
+/*bajada de categorias*/
+.tituloBajada {
+    padding: 1.5rem;
+}
+
+
+/*contenedor de categorias*/
+.cajaRoja {
+    margin-left: 10px;
+    width: 500px;
+    /* Ancho de la caja */
+    height: 50px;
+    /* Alto de la caja */
+    /* background-color: white; /* Color de fondo blanco */
+    background-color: #c30f0f;
+    border:#c30f0f;
+    border-radius: 5px;
+    /* Bordes más redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    /* Sutil sombra */
+    
+}
+
+.tituloCategoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    color: #FFFFFF;
+    /* Color del texto */
 }

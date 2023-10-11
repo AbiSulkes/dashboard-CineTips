@@ -1,22 +1,39 @@
 body {
-    background-color: black !important;
-    font-family: 'Poppins' !important;
-    color:white !important;
+    background-color: #161616 !important;
+    font-family: 'Poppins', sans-serif;
+    color:#FFFFFF !important;
     padding: 2em;
   }
 
   .enlace {
     margin: 10px;
     text-decoration: none;
-    color: white !important;
+    color: #FFFFFF !important;
     font-weight: 500;
   }
   .enlace:hover {
-    color: red !important;
+    color: #B30000 !important;
   }
-  
+  /*enlace desplegable*/
+  .enlaceDesplegable{
+    background-color: #161616 !important;
+    border: #161616 !important;
+    margin: 10px !important;
+    text-decoration: none;
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    position: relative !important;
+    top: -2.5rem !important;
+    left: 16.2rem !important;
+  }
+
+  .enlaceDesplegable:hover{
+    color: #B30000 !important;
+  }
+
   /* Estilo para la barra horizontal */
   hr {
     width: 100% !important;
   }
+
   
