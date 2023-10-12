@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
+
+
+
+
 
 function Home() {
     //TOTAL USUARIOS
@@ -73,14 +78,19 @@ function Home() {
                     <h4 className='tituloBajada'>Categorías en la base de datos</h4>
                     <hr />
                     <br />
+
                     <div className='container'>
-                        <div className='container3'>
-                            <button className='cajaRoja'> <h6 className='tituloCategoria' >Generos</h6></button>
-                        </div>
 
                         <div className='container3'>
-                            <button className='cajaRoja'> <h6 className='tituloCategoria' > Calificación</h6></button>
+                        <button className='cajaRoja'>   <Link to="./Genero"> <h6 className='tituloCategoria' >CATEGORIA: Generos</h6></Link></button> 
                         </div>
+
+
+
+                        <div className='container3'>
+                        <button className='cajaRoja'>   <Link to="./Calificacion"> <h6 className='tituloCategoria' >CATEGORIA: Calificación</h6></Link></button> 
+                        </div>
+
                     </div>
                     <br />
                     <hr />

@@ -4,17 +4,15 @@ class Genero extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            productos: [],
-            isLoading: true, // Agregar una bandera para mostrar el estado de carga
+            generos: [],
+            isLoading: true,
         };
     }
 
     componentDidMount() {
-        console.log("Me monté");
-        this.traerProductos();
+        this.traerGeneros();
     }
 
-    // Llamada a la API
     apiCall(url) {
         return fetch(url)
             .then(response => {
@@ -22,42 +20,41 @@ class Genero extends Component {
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
-                throw error; // Propagar el error para que se maneje en el componente
+                throw error;
             });
     }
 
-    // Obtener productos de la API y actualizar el estado
-    traerProductos() {
-        this.apiCall("https://cinetips.onrender.com/peliculas/productos")
+    traerGeneros() {
+        this.apiCall("https://cinetips.onrender.com/peliculas/generos")
             .then(data => {
-                console.log(data);
                 this.setState({
-                    productos: data.data || [],
-                    isLoading: false, // Cambiar el estado de carga después de obtener datos
+                    generos: data.data || [],
+                    isLoading: false,
                 });
             })
             .catch(error => {
-                console.error('Error fetching productos:', error);
-                this.setState({ isLoading: false }); // Cambiar el estado de carga en caso de error
+                console.error('Error fetching generos:', error);
+                this.setState({ isLoading: false });
             });
     }
 
     render() {
-        const { productos, isLoading } = this.state;
+        const { generos, isLoading } = this.state;
 
         let contenido;
 
         if (isLoading) {
             contenido = "Cargando...";
         } else {
-            contenido = productos.map(producto => (
-                <div key={producto.id}>
-                    <h5>Producto: {producto.nombre}</h5>
-                    <img src={producto.imagen} alt={`Imagen de ${producto.nombre}`} />
-                    <p>Duración: {producto.duracion}</p>
-                    <p>Fecha de estreno: {producto.fecha_estreno}</p>
-                    <p>Tipo: {producto.tipo}</p>
-                    
+            contenido = generos.map(genero => (
+                <div key={genero.id}>
+                    <h5>Genero: {genero.genero}</h5>
+                    <p>Productos:</p>
+                    <ul>
+                        {genero.productos.map(producto => (
+                            <li key={producto.id}>{producto.nombre}</li>
+                        ))}
+                    </ul>
                 </div>
             ));
         }
@@ -65,7 +62,7 @@ class Genero extends Component {
         return (
             <div>
                 <br />
-                <h2>Generos</h2>
+                <h2>Géneros</h2>
                 {contenido}
             </div>
         );
