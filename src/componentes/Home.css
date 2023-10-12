@@ -45,6 +45,7 @@
     /* Bordes más redondeados */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     /* Sutil sombra */
+    border-left:solid 3px white;
 }
 
 /*bajada de categorias*/
