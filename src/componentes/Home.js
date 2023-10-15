@@ -97,11 +97,11 @@ function Home() {
                     <br />
                     <div className='container'>
                         <div className='container3'>
-                            <button className='cajaRoja'> <h6 className='tituloCategoria' >Último usuario creado</h6></button>
+                            <button className='cajaRoja'>  <Link to="./UltimoUsuario"> <h6 className='tituloCategoria' >Último usuario creado</h6> </Link></button>
                         </div>
 
                         <div className='container3'>
-                            <button className='cajaRoja'> <h6 className='tituloCategoria' > Último producto creado</h6></button>
+                            <button className='cajaRoja'> <Link to="./UltimoProducto"> <h6 className='tituloCategoria' > Último producto creado</h6>  </Link> </button>
                         </div>
                     </div>
                     <br />

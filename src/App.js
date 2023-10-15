@@ -8,6 +8,8 @@ import Producto from './componentes/Producto';
 import Genero from './componentes/Genero';
 import Calificacion from './componentes/Calificacion';
 import Error from './componentes/Error';
+import UltimoUsuario from './componentes/ultimoUsuario'; 
+import UltimoProducto from './componentes/ultimoProducto';
 //importo React router
 import { Link, Route, Routes } from 'react-router-dom';
 //importo bootstrap css
@@ -48,7 +50,11 @@ function App() {
           <Route path="/Producto" element={<Producto />} />
           <Route path="/Genero" element={<Genero />} />
           <Route path="/Calificacion" element={<Calificacion />} />
+          <Route path="/ultimoUsuario" element={<UltimoUsuario />} />
+          <Route path="/ultimoProducto" element={<UltimoProducto />} />
+
           <Route element={<Error />} />
+          
         </Routes>
 
       </header>
